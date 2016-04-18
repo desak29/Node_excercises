@@ -1,0 +1,14 @@
+{
+  "name": "node101practice",
+  "version": "1.0.0",
+  "description": "this is a practice node app",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kochan Desai",
+  "license": "ISC"
+}
