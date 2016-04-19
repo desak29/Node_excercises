@@ -13,13 +13,22 @@ function renderNoPage(request,response){
 response.writeHead(404);
     response.end('404,page not found');
 }
+function renderTwitterPage(request,response){
 
+    var tweetHtml = fs.readFileSync('twitter1/tweet.html');
+    response.writeHead(200,{'content-type':'text/html'});
+response.write(tweetHtml);
+    response.end();
+}
 
 
 var server= http.createServer(function(request, response){
     if(request.url =='/'){
         renderHomePage(request, response);
-    }else {
+    }else if(request.url == '/tweet.html'){
+        renderTwitterPage(request, response);
+    }
+    else {
         renderNoPage(request, response);
     }
     console.log('this is a line to show that some came to the server.');

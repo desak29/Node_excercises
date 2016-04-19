@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="tweetApp">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Football Tweets</title>
+
+<meta name="description" content="football Tweets explores what it means to be a hyper-connected football fan.">
+<meta name="author" content="Neave Interactive">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="football tweets">
+ <META HTTP-EQUIV="refresh" CONTENT="400">
+<link rel="stylesheet" href="tweet/css.css">
+<link rel="stylesheet" href="tweet/1.css">
+
+ <link rel="stylesheet" href="b.css">
+
+
+ <link rel="apple-touch-icon-precomposed" href="">
+<link rel="image_src" href="">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+ <script type="text/javascript" src="js/angular.min.js"></script>
+ <script type="text/javascript" src="js/angular-route.min.js"></script>
+ <script type="text/javascript" src="js/angular-animate.min.js"></script>
+
+ <script type="text/javascript" src="js/controller.js"></script>
+
+
+</head>
+<body ng-controller="mainController">
+<div class="intro">
+
+<div class="logo">
+<h1 translate="no" class="notranslate"><span>Football</span> <span>Tweets</span><span class="face">&#x26BD;</span></h1>
+</div>
+<div>
+<p>The Internet has made us more connected than ever before. This app captures this connectivity for soccer. We all want to know whats trending with the latest football matches right?!</p>
+<p><em translate="no" class="notranslate" style="border:dotted thin white;">Fo&#x26BD;tball Tweets</em> explores what it means to be hyper-connected with the football world</p>
+</div>
+<div>
+<p class="about">The following Tweets are sourced directly from Twitter.</p>
+<p><small><span class="about"> </span><span class="links"><a href="javascript:history.go(0)" target="_top">&#x26BD;</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+ <a href="https://twitter.com/share" target="_blank" rel="nofollow" class="twitter-share-button"  data-related="neave" data-hashtags="">Share&nbsp;on&nbsp;Twitter</a></span></small></p>
+</div>
+</div>
+
+<p class="neave notranslate"><a href="javascript:history.go(0)" target="_top"><span>&#x26BD;</span></a></p>
+<p style="display: block; height: 60px;" class="more"> <a HREF="javascript:history.go(0)"> Refresh <span translate="no" class="notranslate"> Football Tweets &#x26BD;</span> </a></p>
+<p style="display: none;" class="loading">Loading…</p>
+<p style="display: none;" class="error hidden">Could not load Tweets!</p>
+<noscript><p class="no-js"><a href="http://enable-javascript.com/" target="_blank">Please enable JavaScript!</a></p></noscript>
+
+<ul ><li id="bg" ng-repeat="tweet in data" ng-style="{'background-image': 'url(' + tweet.user.profile_banner_url + ')'}"> <p class="text" id="tweetText"  >{{tweet.text}}</p><p class="info"><span dir="ltr">{{tweet.user.name}}</span> &nbsp;·&nbsp; <span class="time" data-timestamp="1459868147">{{tweet.created_at}}</span></p></li>
+
+
+<p style="display: block;" class="top"><a href="">↑&nbsp; Back to top &nbsp;↑</a></p>
+</body>
+
+</html>
